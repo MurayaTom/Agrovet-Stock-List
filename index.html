@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agrovet Stock List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌿 Agrovet Stock Manager</h1>
+    <input type="text" id="searchBar" placeholder="🔍 Search by product name..." />
+  </header>
+
+  <section id="category-filters">
+    <button data-category="All">All</button>
+    <button data-category="Insecticides">Insecticides</button>
+    <button data-category="Fungicides">Fungicides</button>
+    <button data-category="Dewormers">Dewormers</button>
+    <button data-category="Foliar Feeds">Foliar Feeds</button>
+    <button data-category="Fertilizers">Fertilizers</button>
+    <button data-category="Seeds">Seeds</button>
+    <button data-category="Livestock Feeds">Livestock Feeds</button>
+    <button data-category="Herbivores">Herbivores</button>
+  </section>
+
+  <section id="add-stock">
+    <h2>Add New Stock</h2>
+    <form id="stockForm">
+      <input type="text" id="product" placeholder="Product Name" required />
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option>Insecticides</option>
+        <option>Fungicides</option>
+        <option>Dewormers</option>
+        <option>Foliar Feeds</option>
+        <option>Fertilizers</option>
+        <option>Seeds</option>
+        <option>Livestock Feeds</option>
+        ]<option>Herbivores</option>
+      </select>
+      <input type="number" id="quantityItems" placeholder="Quantity (items)" min="0" />
+      <input type="text" id="quantityWeight" placeholder="Quantity (kg/litres)" />
+      <input type="number" id="price" placeholder="Price (KES)" min="0" required />
+      <button type="submit">➕ Add Item</button>
+    </form>
+  </section>
+
+  <section id="stock-list">
+    <h2>📦 Stock Inventory</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Category</th>
+          <th>Items</th>
+          <th>Weight</th>
+          <th>Price (KES)</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
